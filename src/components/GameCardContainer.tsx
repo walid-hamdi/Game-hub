@@ -3,7 +3,7 @@ import { PropsWithChildren } from "react";
 
 const GameCardContainer = ({ children }: PropsWithChildren) => {
   return (
-    <Box borderRadius={10} overflow="hidden" width="360px">
+    <Box width="100%" borderRadius={10} overflow="hidden">
       {children}
     </Box>
   );
