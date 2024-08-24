@@ -1,13 +1,18 @@
 import { HStack, Image, Link, List, ListItem } from "@chakra-ui/react";
 import useGenres, { Genre } from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
+import GenreListSkelton from "./GenreListSkelton";
 
 interface Props {
   onSelectedGenre: (genre: Genre) => void;
 }
 
 const GenreList = ({ onSelectedGenre }: Props) => {
-  const { data } = useGenres();
+  const { data, error, isLoading } = useGenres();
+
+  if (error) return null;
+
+  if (isLoading) return <GenreListSkelton />;
 
   return (
     <List>
