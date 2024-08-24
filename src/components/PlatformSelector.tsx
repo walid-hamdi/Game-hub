@@ -12,10 +12,14 @@ const PlatformSelector = ({ onSelectedPlatform, selectedPlatform }: Props) => {
 
   if (error) return null;
 
+  const currentPlatform = data.find(
+    (item) => item.name === selectedPlatform?.name
+  );
+
   return (
     <Menu>
       <MenuButton as={Button} rightIcon={<BiChevronDown />}>
-        {selectedPlatform ? selectedPlatform.name : "Platforms"}
+        {currentPlatform?.name || "Platforms"}
       </MenuButton>
       <MenuList>
         {data.map((platform) => (
