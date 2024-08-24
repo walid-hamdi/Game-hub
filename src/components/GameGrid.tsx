@@ -4,6 +4,7 @@ import GameCard from "./GameCard";
 import GameCardContainer from "./GameCardContainer";
 import GameCardSkelton from "./GameCardSkelton";
 import { Genre } from "../hooks/useGenres";
+import PlatformSelector from "./PlatformSelector";
 
 interface Props {
   selectedGenre?: Genre;
