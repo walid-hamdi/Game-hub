@@ -1,6 +1,6 @@
 import useData from "../hooks/useData";
 
-interface Platform {
+export interface Platform {
   id: number;
   name: string;
   slug: string;
