@@ -12,7 +12,7 @@ const usePlatforms = () =>
     queryKey: ["platforms"],
     queryFn: () =>
       apiClient
-        .get<FetchResponse<Platform>>("/platforms")
+        .get<FetchResponse<Platform>>("/p")
         .then((res) => res.data),
   });
 
