@@ -1,5 +1,4 @@
 import { HStack, Icon } from "@chakra-ui/react";
-import { Platform } from "../hooks/useGames";
 
 import { BsGlobe } from "react-icons/bs";
 import {
@@ -14,6 +13,7 @@ import { MdPhoneIphone } from "react-icons/md";
 import { SiNintendo } from "react-icons/si";
 
 import { IconType } from "react-icons";
+import { Platform } from "../hooks/usePlatforms";
 
 interface Props {
   platforms: Platform[];

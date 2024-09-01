@@ -1,11 +1,11 @@
 import { Heading, HStack, Image, Link, List, ListItem } from "@chakra-ui/react";
-import useGenres, { Genre } from "../hooks/useGenres";
+import useGenres from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
 import GenreListSkelton from "./GenreListSkelton";
 
 interface Props {
-  onSelectedGenre: (genre: Genre) => void;
-  selectedGenre: Genre | undefined;
+  onSelectedGenre: (genreId: number) => void;
+  selectedGenre: number | undefined;
 }
 
 const GenreList = ({ selectedGenre, onSelectedGenre }: Props) => {
@@ -32,9 +32,9 @@ const GenreList = ({ selectedGenre, onSelectedGenre }: Props) => {
               />
               <Link
                 fontSize="lg"
-                fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
+                fontWeight={genre.id === selectedGenre ? "bold" : "normal"}
                 onClick={() => {
-                  onSelectedGenre(genre);
+                  onSelectedGenre(genre.id);
                 }}
               >
                 {genre.name}
