@@ -7,7 +7,7 @@ const useTrailers = (gameId: number) => {
 
   return useQuery({
     queryKey: ["trailers", gameId],
-    queryFn: apiClient.getTrailers,
+    queryFn: apiClient.getAll,
   });
 };
 
