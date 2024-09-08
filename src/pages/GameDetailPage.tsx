@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import ExpandableText from "../components/ExpandableText";
 import GameAttributes from "../components/GameAttributes";
 import GameScreenshot from "../components/GameScreenshot";
-import GameTrails from "../components/GameTrailer";
+import GameTrails from "../components/GameTrails";
 import useGame from "../hooks/useGame";
 
 const GameDetailPage = () => {
