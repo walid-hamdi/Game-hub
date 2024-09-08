@@ -1,4 +1,4 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar";
 
@@ -14,11 +14,13 @@ const Layout = () => {
           base: "1fr",
           lg: "200px 1fr",
         }}
-        >
+      >
         <GridItem area="nav">
           <NavBar />
         </GridItem>
-        <Outlet />
+        <Box padding={5}>
+          <Outlet />
+        </Box>
       </Grid>
     </>
   );
